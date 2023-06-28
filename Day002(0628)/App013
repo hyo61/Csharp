@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace If_else
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = 3;
+
+            if (number%2 != 0)
+            {
+                Console.WriteLine("홀수입니다.");
+            }else
+            {
+                Console.WriteLine("짝수입니다.");
+            }
+            
+        }
+    }
+}
