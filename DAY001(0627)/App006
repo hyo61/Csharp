@@ -1,0 +1,28 @@
+using System;
+using System.CodeDom;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace App006
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            byte a = 255;
+            sbyte b = (sbyte)a;
+
+            Console.WriteLine(b);
+
+            uint c = uint.MaxValue;//4294967295
+            int d = int.MinValue;
+            Console.WriteLine($"{c} {d}");
+
+            float e = 3.14159F;
+            double f = 3.141592;
+
+        }
+    }
+}
