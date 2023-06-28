@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Quiz005
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*정수를 1개 입력받는다.(음수, 홀수)
+             * 8,양수,짝수 hint if else 문 %2 == 0 짝수
+             */
+
+            int number;
+            number = Int32.Parse(Console.ReadLine());
+
+            if (number > 0)
+            {
+                Console.WriteLine("양수입니다.");
+            }
+            else
+            {
+                Console.WriteLine("음수입니다.");
+            }
+            if (number % 2 == 0)
+            {
+                Console.WriteLine("짝수입니다.");
+            }
+            else
+            {
+                Console.WriteLine("홀수입니다.");
+            }
+                
+        }
+    }
+}
