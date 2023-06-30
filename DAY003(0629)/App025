@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace case_string
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string num = "화";
+
+            switch (num)
+            {
+                case "월":
+                    Console.WriteLine("월요일이 출력되었습니다.");
+                    break;
+                case "화":
+                    Console.WriteLine("화요일이 출력되었습니다");
+                    break;
+                default:
+                    Console.WriteLine("기본값이 출력되었습니다.");
+                    break;
+            }
+        }
+    }
+}
