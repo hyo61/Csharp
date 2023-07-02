@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Quiz008
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("단을 입력하세요 : ");
+            int num = int.Parse(Console.ReadLine());
+
+            for(int i = num; i<=num; i++)
+            {
+                for(int j = 1; j<=9; j++)
+                {
+                    switch (num)
+                    {
+                        case 3:
+                            Console.WriteLine($"{num}*{j}={num * j}");
+                            break;
+                        case 4:
+                            Console.WriteLine($"{num}*{j}={num * j}");
+                            break;
+                        case 5:
+                            Console.WriteLine($"{num}*{j}={num * j}");
+                            break;
+                        case 6:
+                            Console.WriteLine($"{num}*{j}={num * j}");
+                            break;
+                        default:
+                            Console.WriteLine("기본값이 출력되었습니다.");
+                            break;
+                    }
+                }
+            }
+
+            
+        }
+    }
+}
