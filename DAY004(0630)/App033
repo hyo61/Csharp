@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Runtime.Remoting.Messaging;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace calulator
+{
+    class Calculator
+    {
+        public static int Plus(int a, int b)
+        {
+            return a + b;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Calculator calculator = new Calculator();
+            int result = Calculator.Plus(100, 200);
+            Console.WriteLine(result);
+         
+        }
+    }
+}
