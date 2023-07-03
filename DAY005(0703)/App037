@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1arrary
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //1부터 10까지 배열에 짝수만 입력되는 5크기의 arr 배열을 만들어라
+            int[] arr = new int[5];
+            int cnt = 1;
+            for(int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = cnt;
+                cnt += 2;
+                Console.WriteLine(arr[i]);
+            }
+            }
+           }         
+        }
+    
