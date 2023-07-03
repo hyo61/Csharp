@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace property02
+{
+    class Cat
+    {
+        public string name { set; get; }
+        public int age { set; get; }
+        public string color { set; get; }
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+            }
+        }
+    }
+}
