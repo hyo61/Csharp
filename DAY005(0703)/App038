@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2method
+{
+    internal class Program
+    {
+        //국어, 영어, 수학 성적 평균 ex) 100, 100, 90
+        double Avg(int kor, int eng, int math)
+        {
+            int total = kor + eng + math;
+            return (double)total / 3;
+        }
+        static void Main(string[] args)
+        {
+            int kor, eng, math;
+
+            kor = int.Parse(Console.ReadLine());
+            eng = int.Parse(Console.ReadLine());
+            math = int.Parse(Console.ReadLine());
+
+            //double result = Avg();
+            Program p = new Program();
+            double result = p.Avg(kor, eng, math);
+            Console.WriteLine(result);
+
+        }
+    }
+}
