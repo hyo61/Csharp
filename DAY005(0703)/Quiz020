@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace quiz01
+{
+    class Cat
+    {
+        private string name;
+        private int age;
+        private string color;
+
+        public void setName(string _name)
+        {
+            name = _name;
+        }
+        public void setAge(int _age)
+        {
+            age = _age;
+        }
+        public void setColor(string _color)
+        {
+            color = _color;
+        }
+        public string getName()
+        {
+            return name;
+        }  
+        public int getAge()
+        {
+            return age;
+        }
+        public string getColor()
+        {
+            return color;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Cat cat = new Cat();
+            cat.name = "나비";
+            cat.age = 5;
+            cat.color = "흰색";
+            Console.WriteLine("고양이 이름 : " + cat.name);
+            Console.WriteLine("고양이 나이 : " + cat.age+" 살");
+            Console.WriteLine("고양이 색깔 : " + cat.color);
+        }
+    }
+}
