@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace oop03
+{
+    class Cat
+    {
+        public string Name;
+        public string Color;
+        public int Age;
+
+        //생성자
+        public Cat()    //default 생성자(내부가 빔)
+        {
+            //초기값
+            this.Name = "야옹이";
+            this.Age = 2;
+            this.Color = "누런색";
+        }
+        public void Meow()
+        {
+            Console.WriteLine("야옹");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Cat nya = new Cat();
+            nya.Name = "냐옹이";
+            nya.Color = "하얀";
+            nya.Age = 5;
+            Console.WriteLine(nya.Color + nya.Name+ " " + nya.Age);
+        }
+    }
+}
