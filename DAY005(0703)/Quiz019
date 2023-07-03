@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace quiz_do_while
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //1.무한루프를 do_while 문으로 만든다.
+            //2.정수 100을 넣으면 종료된다.
+            //3.whitch~case 문을 넣는다.
+            int n;
+            do
+            {
+                Console.WriteLine("숫자를 입력하세요 : ");
+                n = int.Parse(Console.ReadLine());
+
+                switch (n)
+                {
+                    case 1:
+                        Console.WriteLine("1을 입력하였습니다.");
+                        break;
+
+                    case 2:
+                        Console.WriteLine("2를 입력하였습니다.");
+                        break;
+
+                    default:
+                        Console.WriteLine("1,2외의 수를 입력하였습니다.");
+                        break;
+                }
+                if (n == 100)
+                {
+                    Console.WriteLine("100을 입력하여 종료합니다.");
+                    break;
+                }
+            }
+            while (true);            
+        }
+    }
+}
