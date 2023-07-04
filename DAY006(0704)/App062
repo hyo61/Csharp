@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp8
+{
+    class Cat
+    {
+        public Cat()    //디폴트 생성자
+        {
+            Console.WriteLine("객체의 생성자가 호출되었습니다.");
+        }
+        ~Cat()  //소멸자
+        {
+            Console.WriteLine("객체의 소멸자가 호출되었습니다.");
+        }
+    }
+    class RussinBlue : Cat
+    {
+        public RussinBlue()
+        {
+            Console.WriteLine("Russinblue 생성자가 호출되었습니다.");
+        }
+        ~RussinBlue()
+        {
+            Console.WriteLine("Russianblue 소멸자가 호출되었습니다.");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Cat cat = new Cat();
+            RussinBlue russinBlue = new RussinBlue();
+        }
+    }
+}
