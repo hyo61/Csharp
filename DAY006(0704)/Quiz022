@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Quiz02
+{
+    class Calculator
+    {
+        public int TotalScore(int kor, int eng, int math)
+        {
+            return kor + eng + math;
+        }
+        public int Avg(int kor, int eng, int math)
+        {
+            return (kor + eng + math)/3;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Calculator cal = new Calculator(); 
+            int kor, eng, math;
+            kor = int.Parse(Console.ReadLine());
+            eng = int.Parse(Console.ReadLine());
+            math = int.Parse(Console.ReadLine());
+            int result1 = cal.TotalScore(kor, eng, math);
+            int result2 = cal.Avg(kor, eng, math);
+
+            Console.WriteLine(result1);
+            Console.WriteLine(result2);
+        }
+    }
+}
