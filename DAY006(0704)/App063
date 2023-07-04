@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    class MyClass
+    {
+        public int Myfield1;
+        public int Myfield2;
+
+        //깊은복사
+        public MyClass DeepCopy()
+        {
+            MyClass newCopy = new MyClass();
+            newCopy.Myfield1 = Myfield1;
+            newCopy.Myfield2 = Myfield2;
+
+            return newCopy;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            MyClass source = new MyClass();
+            source.Myfield1 = 10;
+            source.Myfield2 = 20;
+
+            //객체생성? 일반적으로 new를 통해서
+            //MyClass target = source;
+            MyClass target = source.DeepCopy();
+            target.Myfield2 = 30;
+
+            Console.WriteLine(source.Myfield1 + " : " + source.Myfield2);
+            Console.WriteLine(target.Myfield1 + " : " + target.Myfield2);
+        }
+    }
+}
