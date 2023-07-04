@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    //도형(부모) 클래스를 만든다.
+    //삼각형(자식), 사각형, 원 클래스를 만든다. 상속으로
+    //공통메소드 draw()를 구현하고 각 클래스에서 오버라이딩 해주세요.
+    class Animal
+    {
+        public virtual void NAME()
+        {
+            Console.WriteLine("동물");
+        }
+    }
+    class Lion : Animal
+    {
+        public override void NAME()
+        {
+            Console.WriteLine("사자");
+        }
+    }
+    class Elephant : Animal
+    {
+        public override void NAME()
+        {
+            Console.WriteLine("코끼리");
+        }
+    }
+    class Tiger : Animal
+    {
+        public override void NAME()
+        {
+            Console.WriteLine("호랑이");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Animal[] animals = new Animal[4];
+            animals[0] = new Animal();
+            animals[1] = new Lion();
+            animals[2] = new Elephant();
+            animals[3] = new Tiger();
+
+            for(int i =  0; i < animals.Length; i++)
+            {
+                animals[i].NAME();
+            }
+        }
+    }
+}
