@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    interface ILogger
+    {
+        void WriteLog(string message);
+    }
+    interface IFormattableLogger : ILogger
+    {
+        void WriteLog2(string message);
+    }
+    class ConsoleLogger2 : IFormattableLogger
+    {
+        public void WriteLog(string message)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void WriteLog2(string message)
+        {
+            throw new NotImplementedException();
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
