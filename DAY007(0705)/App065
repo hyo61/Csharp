@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class MyClass
+    {
+        public int myfield1;
+        public int myfield2;
+
+        public MyClass DeepCopy()
+        {
+            MyClass newCopy = new MyClass();
+            newCopy.myfield1 = myfield1;
+            newCopy.myfield2 = myfield2;
+
+            return newCopy;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            MyClass source = new MyClass();
+            source.myfield1 = 10;
+            source.myfield2 = 20;
+
+            //MyClass target = new MyClass();
+            MyClass target = source.DeepCopy();
+            target.myfield2 = 30;
+            Console.WriteLine(source.myfield1 + " " + source.myfield2);
+            Console.WriteLine(target.myfield1 + " " + target.myfield2);
+        }
+    }
+}
