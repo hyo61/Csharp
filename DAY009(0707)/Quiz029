@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Quiz02
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue<string> strings = new Queue<string>();
+            strings.Enqueue("Hello");
+            strings.Enqueue("Halo");
+            strings.Enqueue("hi");
+
+            while (strings.Count > 0)
+                Console.WriteLine(strings.Dequeue());
+
+            Stack<char> stack = new Stack<char>();
+            stack.Push('H');
+            stack.Push('e');
+            stack.Push('l');
+            stack.Push('l');
+            stack.Push('o');
+
+            Console.WriteLine();
+            while (stack.Count > 0)
+                Console.Write(stack.Pop());
+            Console.WriteLine();
+
+        }
+    }
+}
