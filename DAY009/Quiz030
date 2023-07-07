@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace quiz03
+{
+    class student
+    {
+        public int ID { get; set; }
+        public string NAME { get; set; }
+        public int Pnumber { get; set; }
+
+        public student(int id, string name, int pnumber)
+        {
+            ID = id;
+            NAME = name;
+            Pnumber = pnumber;
+
+        }
+        internal class Program
+        {
+            static int N = 0;
+            static void Main(string[] args)
+            {
+                while (true)
+                {
+                    Console.WriteLine("1.데이터 삽입");
+                    Console.WriteLine("2.데이터 삭제");
+                    Console.WriteLine("3.데이터 조회");
+                    Console.WriteLine("4.데이터 수정");
+                    Console.WriteLine("5.데이터 종료");
+
+                    Console.Write("메뉴 : ");
+                    N = Int32.Parse(Console.ReadLine());
+
+                    switch (N)
+                    {
+                        case 1:
+                            Console.Write("데이터ID를 입력하시오 : ");
+                            int.Parse(Console.ReadLine());
+                            Console.Write("이름을 입력하시오 : ");
+                            int.Parse(Console.ReadLine());
+                            //삽입기능
+                            break;
+                        case 2:
+                            //삭제기능
+                            break;
+                        case 3:
+                            //조회기능
+                            break;
+                        case 4:
+                            //수정기능
+                            break;
+                        case 5:
+                            Console.WriteLine("수고하셨습니다.");
+                            Console.WriteLine("종료하겠습니다.");
+                            Environment.Exit(0);
+                            break;
+                        default:
+                            Console.WriteLine("잘못된메뉴");
+                            break;
+                    }
+                }              
+            }
+        }
+    }
+}
