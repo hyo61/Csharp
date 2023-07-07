@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.NetworkInformation;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Quiz1
+{
+    internal class Program
+    {
+        private static void Print(int value)
+        {
+            Console.Write($"{value} ");
+        }
+        private static bool CheckPassed(int arr)
+        {
+            return arr >= 101;
+        }
+        static void Main(string[] args)
+        {
+            Random rnd = new Random();
+            int[] arr = new int[80];
+            for (int i = 1; i < arr.Length; i++)
+            {
+                arr[i] = rnd.Next(1,100);
+                Console.Write(arr[i] + " ");
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine($"이진탐색 80 : " + Array.BinarySearch<int>(arr, 80));
+
+            Console.WriteLine();
+
+            Array.Sort(arr);
+            Array.ForEach<int>(arr, new Action<int>(Print));
+
+        
+        }
+    }
+}
