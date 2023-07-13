@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Quiz03
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = {1,2,3};
+            
+            try
+            {
+                /*for(int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine(arr[i]);
+                }
+                */
+                int a = 100;
+                int result = a / 0;
+            }                
+            catch(IndexOutOfRangeException e) //배열 넘어선거 잡아내는 예외
+            {
+                Console.WriteLine("배열의 범위를 벗어난 예외가 발생하였습니다.");
+                Environment.Exit(0);
+            }
+            catch(DivideByZeroException e)  //정수를 0으로 나누면 잡아내는 예외
+            {
+                Console.WriteLine("0으로 나누면 안됩니다.");
+                Environment.Exit(0);
+            }
+            catch(Exception ex) //나머지 발생 예외 잡아냄
+            {
+                Console.WriteLine(ex.Message);
+                Environment.Exit(0);
+            }
+        }
+    }
+}
