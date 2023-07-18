@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            while(true)
+            {
+                Console.WriteLine("1. 테이블 생성");
+                Console.WriteLine("2. 테이블 삽입");
+                Console.WriteLine("3. 테이블 조회");
+                Console.WriteLine("4. 테이블 수정");
+                Console.WriteLine();
+                Console.Write("메뉴 : ");
+                int n = int.Parse(Console.ReadLine());
+                switch (n)
+                {
+                    case 0:
+                        Console.WriteLine("프로그램을 종료합니다.");
+                        Environment.Exit(0);
+                        break;
+                    case 1:
+                        Console.WriteLine("테이블이 생성되었습니다.");
+                        break;
+                    case 2:
+                        Console.Write("이름을 입력해 주세요 : ");
+                        Console.ReadLine();
+                        Console.Write("전화번호를 입력해 주세요 : ");
+                        Console.ReadLine();
+                        Console.WriteLine("데이터가 정상적으로 입력되었습니다.");
+                        break;
+                    case 3:
+                        Console.WriteLine("테이블이 조회되었습니다.");
+                        break;
+                    case 4:
+                        Console.WriteLine("테이블이 수정되었습니다.");
+                        break;
+                    default:
+                        Console.WriteLine("잘못된 메뉴입니다.");
+                        break;
+                }
+                Console.WriteLine();
+            }           
+        }
+    }
+}
