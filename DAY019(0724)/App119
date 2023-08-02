@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Stream stream1 = new FileStream("a.dat, FileMode.Create");
+            Stream stream2 = new FileStream("b.dat, FileMode.open");
+            Stream stream3 = new FileStream("c.dat, FileMode.OpenOrCreate");
+
+            Stream stream4 = new FileStream("d.dat, FileMode.Truncate");
+            Stream stream5 = new FileStream("e.dat, FileMode.Append");
+
+            long someValue = 0x123456789ABCDEF0;
+
+            Stream outStream = new FileStream("f.dat", FileMode.Create);
+            byte[] wBytes = BitConverter.GetBytes(someValue);
+            outStream.Write(wBytes, 0, wBytes.Length);
+            outStream.Close();
+
+            using (Stream outStream2 = new FileStream("g.dat", FileMode.Create))
+            {
+                byte[] wBytes2 = BitConverter.GetBytes(someValue);
+                outStream2.Write(wBytes2, 0, wBytes2.Length);
+            }
+        }
+    }
+}
