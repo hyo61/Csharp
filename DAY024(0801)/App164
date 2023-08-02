@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    public delegate void DataReceivedEventHandler(object sender, EventArgs e);
+
+    public class DataReceiver
+    {
+        // DataReceivedEventHandler 타입의 이벤트를 여기에 구현하세요.
+        public event DataReceivedEventHandler DataReceived;
+        public void OnDataReceived()
+        {
+            // 이벤트를 트리거 동작을 구현하세요!!!
+            DataReceived?.Invoke(this, EventArgs.Empty);
+        }
+    }
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            DataReceiver receiver = new DataReceiver();
+            receiver.DataReceived += (sender, e) =>
+            {
+                //사용자 이벤트 처리 작업
+                Console.WriteLine("데이터를 받았습니다.");
+            };
+            receiver.OnDataReceived();
+        }
+    }
+}
