@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp19
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                FileInfo file = new FileInfo("c:\\Temp\\A.txt");
+                FileStream fs = file.Create(); //생성
+                fs.Close();
+
+                FileInfo src = new FileInfo("c:\\Temp\\A.txt");
+                FileInfo dst = src.CopyTo("c:\\Temp\\B.txt"); //복사
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+    }
+}
